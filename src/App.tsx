@@ -26,7 +26,7 @@ function TreeFlow() {
   const [edges, setEdges, onEdgesChange] = useEdgesState([]);
   
   const [selectedCatId, setSelectedCatId] = useState<string | null>(null);
-  const { fitView, setCenter, getZoom } = useReactFlow();
+  const { setCenter, getZoom } = useReactFlow();
 
   const selectedCat = useMemo(() => cats.find(c => c.id === selectedCatId) || null, [selectedCatId]);
 
