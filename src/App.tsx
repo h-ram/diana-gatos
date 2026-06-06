@@ -1,4 +1,4 @@
-import React, { useCallback, useMemo, useState, useEffect } from 'react';
+import { useCallback, useMemo, useState, useEffect } from 'react';
 import ReactFlow, { 
   Background, 
   Controls, 
@@ -12,7 +12,7 @@ import ReactFlow, {
 } from 'reactflow';
 import 'reactflow/dist/style.css';
 
-import { cats, CatData } from './data/cats';
+import { cats } from './data/cats';
 import { getLayoutedElements } from './utils/layout';
 import CatNode from './components/CatNode';
 import { Sidebar } from './components/Sidebar';
@@ -94,7 +94,7 @@ function TreeFlow() {
     );
   }, [selectedCatId, setNodes]);
 
-  const onNodeClick = useCallback((_, node: Node) => {
+  const onNodeClick = useCallback((_event: any, node: Node) => {
     setSelectedCatId(node.id);
     
     // Center to node slightly to the left if on desktop so sidebar doesn't cover it

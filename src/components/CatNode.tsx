@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import { memo } from 'react';
 import { Handle, Position } from 'reactflow';
 import { CatData } from '../data/cats';
 import { cn } from '../utils/cn';
@@ -9,6 +9,8 @@ interface CatNodeProps {
     cat: CatData;
     isSelected: boolean;
   };
+  targetPosition?: Position;
+  sourcePosition?: Position;
 }
 
 const statusColors = {
@@ -25,7 +27,7 @@ const statusIcons = {
   adopted: <Cat className="w-3 h-3" />,
 };
 
-const CatNode = ({ data, targetPosition = Position.Top, sourcePosition = Position.Bottom }: any) => {
+const CatNode = ({ data, targetPosition = Position.Top, sourcePosition = Position.Bottom }: CatNodeProps) => {
   const { cat, isSelected } = data;
 
   return (

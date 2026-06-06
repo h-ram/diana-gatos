@@ -1,6 +1,5 @@
-import React from 'react';
 import { CatData } from '../data/cats';
-import { X, Calendar, Info, PawPrint } from 'lucide-react';
+import { X, Calendar, Info } from 'lucide-react';
 import { cn } from '../utils/cn';
 
 interface SidebarProps {
