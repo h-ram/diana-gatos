@@ -28,7 +28,7 @@ export const cats: CatData[] = [
   { id: 'chetos', name: 'Chetos', generation: 2, status: 'alive', description: 'el hermanisimo', parents: ['mysterious'] },
 
   // 3rd Gen
-  { id: 'nube', name: 'Nube', generation: 3, status: 'alive', description: 'white with beige head top.', image: '/images/nube.png', parents: ['sushi'] },
+  { id: 'nube', name: 'Nube', generation: 3, status: 'lost', description: 'white with beige head top.', image: '/images/nube.png', parents: ['sushi'] },
   { id: 'donut', name: 'Donut', generation: 3, status: 'dead', description: 'full black.', color: 'black', parents: ['sushi'] },
   { id: 'panda', name: 'Panda', generation: 3, status: 'alive', description: 'black and white', parents: ['papas'] },
   { id: 'curry', name: 'Curry', generation: 3, status: 'alive', description: '3rd Gen.', parents: ['papas'] },
@@ -44,9 +44,9 @@ export const cats: CatData[] = [
   { id: 'cookie', name: 'Cookie', generation: 4, status: 'alive', description: 'like coffee', parents: ['muffin'] },
 
   // 5th Gen
-  { id: 'rocky', name: 'Rocky', generation: 5, status: 'alive', description: 'pure white (because survivor)', color: 'white', parents: ['candy'] },
+  { id: 'rocky', name: 'Rocky', generation: 5, status: 'adopted', description: 'pure white (because survivor)', color: 'white', parents: ['candy'] },
   { id: 'coffee', name: 'Coffee', generation: 5, status: 'alive', description: 'white with dark ears/tail/nose', parents: ['candy'] },
   { id: 'tarta', name: 'Tarta', generation: 5, status: 'alive', description: '(cake): similar to coffee but less darkness.', parents: ['coral'] },
-  { id: 'arroz', name: 'Arroz', generation: 5, status: 'alive', description: '(rice): almost as white as rocky, but less.', parents: ['couscous'] },
+  { id: 'arroz', name: 'Arroz', generation: 5, status: 'adopted', description: '(rice): almost as white as rocky, but less.', parents: ['couscous'] },
   { id: 'mimi', name: 'Mimi', generation: 5, status: 'alive', description: 'somewhat similary white', parents: ['puma'] },
 ];

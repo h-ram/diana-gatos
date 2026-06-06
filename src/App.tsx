@@ -66,7 +66,7 @@ function TreeFlow() {
     setNodes(layoutedNodes);
     setEdges(layoutedEdges);
     
-    // Custom responsive viewport logic
+    // Custom responsive viewport logic for mobile
     window.requestAnimationFrame(() => {
       const isMobile = window.innerWidth < 768;
       if (isMobile) {
@@ -75,11 +75,9 @@ function TreeFlow() {
           // Center on Perla, shifted slightly down so her kids are visible, at a readable zoom
           setCenter(topNode.position.x + 110, topNode.position.y + 200, { zoom: 0.8, duration: 800 });
         }
-      } else {
-        fitView({ padding: 0.1, duration: 800, maxZoom: 1 });
       }
     });
-  }, [setNodes, setEdges, fitView, setCenter]);
+  }, [setNodes, setEdges, setCenter]);
 
   // Handle selection state on nodes
   useEffect(() => {
@@ -132,6 +130,8 @@ function TreeFlow() {
         onEdgesChange={onEdgesChange}
         onNodeClick={onNodeClick}
         onPaneClick={() => setSelectedCatId(null)}
+        fitView={window.innerWidth >= 768}
+        fitViewOptions={{ padding: 0.1, maxZoom: 1 }}
         minZoom={0.1}
         maxZoom={2}
         className="bg-slate-900"
